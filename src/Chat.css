@@ -25,7 +25,7 @@
     outline-width: 0;
     color: white;
     font-size: large;
-    width: 100%;
+    width: 80%;
 }
 
 .chat__input > form {
@@ -38,4 +38,13 @@
 
 .chat__messages{
     flex: 1;
+    overflow: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    display: flex;
+    flex-direction: column-reverse;
 }
+
+.chat__messages::-webkit-scrollbar {
+    display: none;
+  }

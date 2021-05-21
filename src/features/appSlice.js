@@ -8,17 +8,19 @@ export const appSlice = createSlice({
     },
     // The `reducers` field lets us define reducers and generate associated actions
     reducers: {
-        setChannelId: (state, action) => {
-            state.value += action.payload;
+        setChannelInfo: (state, action) => {
+            state.channelId = action.payload.channelId;
+            state.channelName = action.payload.channelName;
         },
-        logout: (state) => {
-            state.app = null;
-        }
     },
 });
 
-export const { login, logout } = appSlice.actions;
+export const { setChannelInfo } = appSlice.actions;
 
+export const selectChannelInfo = (state) => ({
+    channelId: state.app.channelId,
+    channelName: state.app.channelName,
+})
 export const selectChannelId = (state) => state.app.channelId
 export const selectChannelName = (state) => state.app.channelName
 
