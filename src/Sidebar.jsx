@@ -41,7 +41,7 @@ const Sidebar = () => {
     return (
         <div className='sidebar'>
             <div className="sidebar__top">
-                <h3>BTS Hateclub</h3>
+                <h3>Sirf Baatein</h3>
                 <ExpandMoreIcon />
             </div>
             <div className="sidebar__channels">
