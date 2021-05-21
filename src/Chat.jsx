@@ -36,7 +36,7 @@ const Chat = () => {
         })
         setInput('')
     }
-
+    console.log('check')
     return (
         <div className='chat'>
             <ChatHeader channelName={channelName} />
@@ -54,6 +54,7 @@ const Chat = () => {
                 <form>
                     <input
                         value={input}
+                        enterkeyhint="go"
                         onChange={(e) => setInput(e.target.value)} placeholder={channelName ? `Message #${channelName}` : `Select Channel`}
                         disabled={!channelId}
                     />
