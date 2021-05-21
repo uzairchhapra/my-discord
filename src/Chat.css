@@ -18,7 +18,7 @@
     background-color: #474b53;
 }
 
-.chat__input > form > input {
+.chat__input > form > input:focus {
     outline: none;
 }
 
