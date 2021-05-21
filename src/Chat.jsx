@@ -54,7 +54,7 @@ const Chat = () => {
                 <form>
                     <input
                         value={input}
-                        enterkeyhint="go"
+                        enterkeyhint="send"
                         onChange={(e) => setInput(e.target.value)} placeholder={channelName ? `Message #${channelName}` : `Select Channel`}
                         disabled={!channelId}
                     />
