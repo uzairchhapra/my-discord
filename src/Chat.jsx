@@ -29,6 +29,7 @@ const Chat = () => {
 
     const sendMessage = (e) => {
         e.preventDefault();
+        console.log(e)
         db.collection('channels').doc(channelId).collection('messages').add({
             message: input,
             user: user,
@@ -51,7 +52,7 @@ const Chat = () => {
             </div>
             <div className="chat__input">
                 <AddCircleIcon fontSize='large' />
-                <form>
+                <form onSubmit={sendMessage}>
                     <input
                         value={input}
                         enterkeyhint="send"
@@ -62,7 +63,7 @@ const Chat = () => {
                         className='chat__inputButton'
                         type="submit"
                         disabled={!channelId}
-                        onClick={sendMessage}
+                    // onClick={sendMessage}
                     >Send Message</button>
                 </form>
                 <div className="chat__inputIcons">
